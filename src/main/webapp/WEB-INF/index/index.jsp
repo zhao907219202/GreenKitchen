@@ -118,8 +118,10 @@
   </div>
 </div>
 
-<div style="margin-left: 400px">
-  <jsp:include page="/WEB-INF/public/foot.jsp"/>
+<div style="text-align: center">
+  <div style="margin:0 auto;width: 800px">
+    <jsp:include page="/WEB-INF/public/foot.jsp"/>
+  </div>
 </div>
 </body>
 </html>
