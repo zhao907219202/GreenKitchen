@@ -8,8 +8,8 @@
 
 <title>绿色厨房</title>
 
-<link rel="stylesheet" type="text/css" href="../../css/recipe/recipeTypeDetail.css" />
-<link rel="stylesheet" type="text/css" href="../../css/public/common.css" />
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css${pageContext.request.contextPath}/recipe${pageContext.request.contextPath}/recipeTypeDetail.css" />
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/public/common.css" />
 </head>
 
 <body>
@@ -19,9 +19,9 @@
 	</div>
 	<div class="main">
 		<div class="nav" style="background-color: #f8f8f8;">
-			<a href="/recipe/goSelected.action"><font class="font13">精选</font></a>　　
-			<a href="/recipe/goTypeIndex.action"><font class="font13">菜谱种类</font></a>　　
-			<a href="/material/goMaterialIndex.action"><font class="font13">食材分类</font></a>
+			<a href="${pageContext.request.contextPath}/recipe/goSelected.action"><font class="font13">精选</font></a>　　
+			<a href="${pageContext.request.contextPath}/recipe/goTypeIndex.action"><font class="font13">菜谱种类</font></a>　　
+			<a href="${pageContext.request.contextPath}/material/goMaterialIndex.action"><font class="font13">食材分类</font></a>
 		</div>
 		
 		<div class="recipes">
@@ -29,14 +29,14 @@
 			<div class="repeatee">
 				<c:forEach items="${recipes}" var="recipe">
 					<div class="element">
-						<a href="/recipe/goRecipeDetail.action?recipe_id=${recipe.id}">
+						<a href="${pageContext.request.contextPath}/recipe/goRecipeDetail.action?recipe_id=${recipe.id}">
 							<img style="width:221px;height:221px"
-							src="/pic/recipe/${recipe.id}.jpg" />
+							src="/pic${pageContext.request.contextPath}/recipe/${recipe.id}.jpg" />
 							<div class="font2" style="margin-top: 5px">${recipe.title}</div>
 						</a>
 						<div class="font3" style="margin-top: 5px">
 							<span style="color:gray">by</span>
-							<a href="/info/goUserIndex.action?user_id=${recipe.user.id}" class="font3">${recipe.user.username}</a>
+							<a href="${pageContext.request.contextPath}/info/goUserIndex.action?user_id=${recipe.user.id}" class="font3">${recipe.user.username}</a>
 						</div>
 					</div>
 				</c:forEach>
@@ -44,11 +44,11 @@
 		</div>
 		
 		<div class="pages">
-			<c:if test="${pageNow!=1}"><a href="/recipe/goTypeDetail.action?type=${type}&value=${value}&pageTo=${pageNow-1}">上一页</a></c:if>
+			<c:if test="${pageNow!=1}"><a href="${pageContext.request.contextPath}/recipe/goTypeDetail.action?type=${type}&value=${value}&pageTo=${pageNow-1}">上一页</a></c:if>
 			<c:forEach begin="1" end="${pageCount}" var="i" step="1">
-			<a href="/recipe/goTypeDetail.action?type=${type}&value=${value}&pageTo=${i}">${i}</a>
+			<a href="${pageContext.request.contextPath}/recipe/goTypeDetail.action?type=${type}&value=${value}&pageTo=${i}">${i}</a>
 			</c:forEach>
-			<c:if test="${pageNow!=pageCount}"><a href="/recipe/goTypeDetail.action?type=${type}&value=${value}&pageTo=${pageNow+1}">下一页</a></c:if>
+			<c:if test="${pageNow!=pageCount}"><a href="${pageContext.request.contextPath}/recipe/goTypeDetail.action?type=${type}&value=${value}&pageTo=${pageNow+1}">下一页</a></c:if>
 		 	<font>　　当前页　${pageNow }/${pageCount }</font>
 	   </div>
 

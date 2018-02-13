@@ -6,8 +6,8 @@
 <head>
 <title>绿色厨房</title>
 	
-	<link rel="stylesheet" type="text/css" href="../../css/public/common.css" />
-	<link rel="stylesheet" type="text/css" href="../../css/info/userIndex.css" />
+	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/public/common.css" />
+	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/info/userIndex.css" />
 	<script type='text/javascript' language="javascript">
 	var clicked = false;
 	function submitMessage(){
@@ -22,8 +22,8 @@
 		clicked = true;
 	}
 	</script> 
-	<script type="text/javascript" src="/js/jquery-1.3.1.js" ></script>
-	<script type="text/javascript" src="/js/ajax/ajax_concern.js" ></script>
+	<script type="text/javascript" src="${pageContext.request.contextPath}/js/jquery-1.3.1.js" ></script>
+	<script type="text/javascript" src="${pageContext.request.contextPath}/js/ajax/ajax_concern.js" ></script>
 	
 </head>
 
@@ -36,9 +36,9 @@
 		<div style="width:1000px;height:30px;">
 			<div style="float:right;margin-right: 20px;">
 			<span class="font7">${loginuser.username},欢迎您！　　</span> 
-			<a href="/issue/goIssueUi.action"><font class="font15">菜谱发布</font></a>　　
-			<a href="/info/goUpdateUi.action"><font class="font15">信息修改</font></a>　　
-			<a href="/info/logout.action"><font class="font15">退出登录</font></a>
+			<a href="${pageContext.request.contextPath}/issue/goIssueUi.action"><font class="font15">菜谱发布</font></a>　　
+			<a href="${pageContext.request.contextPath}/info/goUpdateUi.action"><font class="font15">信息修改</font></a>　　
+			<a href="${pageContext.request.contextPath}/info/logout.action"><font class="font15">退出登录</font></a>
 			</div>
 		</div>
 		<div class="introduction">
@@ -56,9 +56,9 @@
 			<div class="user_table">
 				<table style="text-align: center">
 					<tr style="line-height: 25px;">
-						<td style="width:66px;"><a href="/info/goConcerns.action?user_id=${user.id}"><font class="font16">${concernNum}</font></a><br/><font class="font17">关注</font></td>
-						<td style="width:66px;"><a href="/info/goFans.action?user_id=${user.id}"><font class="font16">${fansNum}</font></a><br/><font class="font17">粉丝</font></td>
-						<td style="width:66px;"><a href="/info/goUserIndex.action?user_id=${user.id}"><font class="font16">${recipeNum}</font></a><br/><font class="font17">菜谱</font></td>
+						<td style="width:66px;"><a href="${pageContext.request.contextPath}/info/goConcerns.action?user_id=${user.id}"><font class="font16">${concernNum}</font></a><br/><font class="font17">关注</font></td>
+						<td style="width:66px;"><a href="${pageContext.request.contextPath}/info/goFans.action?user_id=${user.id}"><font class="font16">${fansNum}</font></a><br/><font class="font17">粉丝</font></td>
+						<td style="width:66px;"><a href="${pageContext.request.contextPath}/info/goUserIndex.action?user_id=${user.id}"><font class="font16">${recipeNum}</font></a><br/><font class="font17">菜谱</font></td>
 					</tr>
 				</table>
 			</div>

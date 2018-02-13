@@ -7,8 +7,8 @@
 
 
 <title>绿色厨房</title>
-	<link rel="stylesheet" type="text/css" href="../../css/public/common.css" />
-	<link rel="stylesheet" type="text/css" href="../../css/recipe/recipeMaterialDetail.css" />
+	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/public/common.css" />
+	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/recipe/recipeMaterialDetail.css" />
 </head>
   
   <body>
@@ -18,9 +18,9 @@
 	
 	<div class="main_detail">
 		<div class="nav" style="background-color: #f8f8f8;">
-			<a href="/recipe/goSelected.action"><font class="font13">精选</font></a>　　
-			<a href="/recipe/goTypeIndex.action"><font class="font13">菜谱种类</font></a> 　　
-			<a href="/material/goMaterialIndex.action"><font class="font13">食材分类</font></a>
+			<a href="${pageContext.request.contextPath}/recipe/goSelected.action"><font class="font13">精选</font></a>　　
+			<a href="${pageContext.request.contextPath}/recipe/goTypeIndex.action"><font class="font13">菜谱种类</font></a> 　　
+			<a href="${pageContext.request.contextPath}/material/goMaterialIndex.action"><font class="font13">食材分类</font></a>
 		</div>
 	
 		<div class="introduction">
@@ -34,9 +34,9 @@
 		<tr><td style="line-height:25px;"><font class="font17">别名：</font><font class="font18">${material.alias}</font></td></tr>
 		<tr><td style="line-height:25px;"><font class="font17">热量：</font><font class="font18">${material.heat}</font></td></tr>	
 		<tr><td style="line-height:25px;"><font class="font17">分类：</font>
-			<a href="/material/goMaterialTypeList.action?type=${material.materialone.type}"><font class="font16">${material.materialone.type}</font></a>
+			<a href="${pageContext.request.contextPath}/material/goMaterialTypeList.action?type=${material.materialone.type}"><font class="font16">${material.materialone.type}</font></a>
 			<font class="font16">,</font>
-			<a href="/material/goMaterialList.action?materialone_id=${material.materialone.id}"><font class="font16">${material.materialone.name}</font></a></td>
+			<a href="${pageContext.request.contextPath}/material/goMaterialList.action?materialone_id=${material.materialone.id}"><font class="font16">${material.materialone.name}</font></a></td>
 		</tr>
 		<tr><td style="line-height:25px;"><font class="font17">适宜人群：</font><font class="font18">${material.description}</font></td></tr>
 		</table>
@@ -47,14 +47,14 @@
 			<div class="repeatee">
 				<c:forEach items="${recipes}" var="recipe">
 					<div class="element">
-						<a href="/recipe/goRecipeDetail.action?recipe_id=${recipe.id}">
+						<a href="${pageContext.request.contextPath}/recipe/goRecipeDetail.action?recipe_id=${recipe.id}">
 							<img style="width:221px;height:221px"
 							src="/pic/recipe/${recipe.id}.jpg" />
 							<div class="font2" style="margin-top: 5px">${recipe.title}</div>
 						</a>
 						<div class="font3" style="margin-top: 5px">
 							<span style="color:gray">by</span>
-							<a href="/info/goUserIndex.action?user_id=${recipe.user.id}" class="font3">${recipe.user.username}</a>
+							<a href="${pageContext.request.contextPath}/info/goUserIndex.action?user_id=${recipe.user.id}" class="font3">${recipe.user.username}</a>
 						</div>
 					</div>
 				</c:forEach>
@@ -62,11 +62,11 @@
 		</div>
 		
 		<div class="pages">
-			<c:if test="${pageNow!=1}"><a href="/material/goMaterialDetail.action?material_id=${material_id}&pageTo=${pageNow-1}">上一页</a></c:if>
+			<c:if test="${pageNow!=1}"><a href="${pageContext.request.contextPath}/material/goMaterialDetail.action?material_id=${material_id}&pageTo=${pageNow-1}">上一页</a></c:if>
 			<c:forEach begin="1" end="${pageCount}" var="i" step="1">
-			<a href="/material/goMaterialDetail.action?material_id=${material_id}&pageTo=${i}">${i}</a>
+			<a href="${pageContext.request.contextPath}/material/goMaterialDetail.action?material_id=${material_id}&pageTo=${i}">${i}</a>
 			</c:forEach>
-			<c:if test="${pageNow!=pageCount}"><a href="/material/goMaterialDetail.action?material_id=${material_id}&pageTo=${pageNow+1}">下一页</a></c:if>
+			<c:if test="${pageNow!=pageCount}"><a href="${pageContext.request.contextPath}/material/goMaterialDetail.action?material_id=${material_id}&pageTo=${pageNow+1}">下一页</a></c:if>
 		 	<font>　　当前页　${pageNow }/${pageCount }</font>
 	   </div>
 	

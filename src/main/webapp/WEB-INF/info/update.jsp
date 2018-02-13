@@ -18,7 +18,7 @@
 		if(num4==""){window.alert("请填写自我描述");return false;}
 	}
 	</script> 
-	<link rel="stylesheet" type="text/css" href="../../css/public/common.css" />
+	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/public/common.css" />
 </head>
 
 <body>
@@ -28,7 +28,7 @@
 		
 		<div style="margin-left:300px;margin-top: 50px;float:left;width:600px">
 	    <h3>用户注册</h3>
-	    <form action="/info/update.action" method="post" name="register" >
+	    <form action="${pageContext.request.contextPath}/info/update.action" method="post" name="register" >
 	    <table style="line-height:50px">
 	    	<tr><td>用户名：</td><td><input style="width:300px;height:25px;" type="text" name="username" readonly="readonly" value="${loginuser.username }"/></td><td width="150px"></td></tr>
 	    	<tr><td>密码：</td><td><input  style="width:300px;height:25px;" type="password" name="password"  value="${loginuser.password }"/></td></tr>

@@ -5,8 +5,8 @@
 <html>
 <head>
 <title>绿色厨房</title>
-	<link rel="stylesheet" type="text/css" href="../../css/public/common.css" />
-	<link rel="stylesheet" type="text/css" href="../../css/rank/rankDetail.css" />
+	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/public/common.css" />
+	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/rank/rankDetail.css" />
 </head>
 
 <body>
@@ -25,7 +25,7 @@
 						<c:if test="${status.count>3}">
 						<td style="width:50px;text-align: center;"><font class="font18">${status.count}</td>
 						</c:if>
-						<td style="width:650px;"><a href="/info/goUserIndex.action?user_id=${user.id}">
+						<td style="width:650px;"><a href="${pageContext.request.contextPath}/info/goUserIndex.action?user_id=${user.id}">
 						<font class="font16">${user.username}</font></a></td>
 						<td><font class="font18">${user.fansnum}粉丝</font></td>
 					</tr>
@@ -34,11 +34,11 @@
 		</div>
 			
 		<div class="pages">
-			<c:if test="${pageNow!=1}"><a href="/rank/goRankUserDetail.action?pageTo=${pageNow-1}">上一页</a></c:if>
+			<c:if test="${pageNow!=1}"><a href="${pageContext.request.contextPath}/rank/goRankUserDetail.action?pageTo=${pageNow-1}">上一页</a></c:if>
 			<c:forEach begin="${(pageNow-2)>1?(pageNow-2):1}" end="${(pageNow+2)<pageCount?(pageNow+2):pageCount}" var="i" step="1">
-			<a href="/rank/goRankUserDetail.action?pageTo=${i}">${i}</a>
+			<a href="${pageContext.request.contextPath}/rank/goRankUserDetail.action?pageTo=${i}">${i}</a>
 			</c:forEach>
-			<c:if test="${pageNow!=pageCount}"><a href="/rank/goRankUserDetail.action?pageTo=${pageNow+1}">下一页</a></c:if>
+			<c:if test="${pageNow!=pageCount}"><a href="${pageContext.request.contextPath}/rank/goRankUserDetail.action?pageTo=${pageNow+1}">下一页</a></c:if>
 		 	<font>　　当前页　${pageNow }/${pageCount }</font>
 	   </div>
 		

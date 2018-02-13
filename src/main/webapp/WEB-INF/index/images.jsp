@@ -42,7 +42,7 @@
 	top: 0;
 	z-index: 2;
 	width: 50%;
-	cursor: url(../../images/index/pre.cur), auto;
+	cursor: url(${pageContext.request.contextPath}/images/index/pre.cur), auto;
 }
 
 #imgslide #next {
@@ -56,7 +56,7 @@
 	width: 50%;
 	top: 0;
 	right: 0;
-	cursor: url(../../images/index/next.cur), auto;
+	cursor: url(${pageContext.request.contextPath}/images/index/next.cur), auto;
 }
 -->
 </style>
@@ -65,7 +65,7 @@
 <body>
 	<div id="imgslide">
 		<span id="pre"></span> <span id="next"></span><img id="showimg"
-			src="../../images/index/index_1.jpg" />
+			src="${pageContext.request.contextPath}/images/index/index_1.jpg" />
 	</div>
 	<script type="text/javascript">
 		$ = function(obj) {
@@ -74,10 +74,10 @@
 
 		//图片地址
 		var imgsrc = new Array();
-		imgsrc[0] = "../../images/index/index_1.jpg";
-		imgsrc[1] = "../../images/index/index_2.jpg";
-		imgsrc[2] = "../../images/index/index_3.jpg";
-		imgsrc[3] = "../../images/index/index_4.jpg";
+		imgsrc[0] = "${pageContext.request.contextPath}/images/index/index_1.jpg";
+		imgsrc[1] = "${pageContext.request.contextPath}/images/index/index_2.jpg";
+		imgsrc[2] = "${pageContext.request.contextPath}/images/index/index_3.jpg";
+		imgsrc[3] = "${pageContext.request.contextPath}/images/index/index_4.jpg";
 
 		//图片预加载
 		var arr = new Array();

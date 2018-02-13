@@ -63,7 +63,7 @@ public class InfoController {
 		if (user != null) {
 			request.getSession().setAttribute("loginuser", user);
 			try {
-				response.sendRedirect("/info/goUserIndex.action?user_id="
+				response.sendRedirect("/GreenKitchen/info/goUserIndex.action?user_id="
 						+ user.getId());
 			} catch (IOException e) {
 				e.printStackTrace();
@@ -109,7 +109,7 @@ public class InfoController {
 
 		response.setCharacterEncoding("utf-8");
 		PrintWriter out = response.getWriter();
-		out.write("<script>alert(\"注册成功，请点击'我的宝典'登录\");window.location.href=\"/info/goLoginView.action\";</script>");
+		out.write("<script>alert(\"注册成功，请点击'我的宝典'登录\");window.location.href=\"/GreenKitchen/info/goLoginView.action\";</script>");
 		return null;
 	}
 
@@ -120,7 +120,7 @@ public class InfoController {
 		response.setCharacterEncoding("utf-8");
 		PrintWriter out = response.getWriter();
 		if(loginuser==null){
-			out.write("<script>alert(\"请先登录\");window.location.href=\"/info/goLoginView.action\";</script>");
+			out.write("<script>alert(\"请先登录\");window.location.href=\"/GreenKitchen/info/goLoginView.action\";</script>");
 			return null;
 		}
 		loginuser = userService.findUserByName(loginuser.getUsername());
@@ -140,7 +140,7 @@ public class InfoController {
 		userService.updateUser(originalUser);
 		response.setCharacterEncoding("utf-8");
 		PrintWriter out = response.getWriter();
-		out.write("<script>alert(\"修改成功\");window.location.href=\"/info/goLoginView.action\";</script>");
+		out.write("<script>alert(\"修改成功\");window.location.href=\"/GreenKitchen/info/goLoginView.action\";</script>");
 		return null;
 	}
 

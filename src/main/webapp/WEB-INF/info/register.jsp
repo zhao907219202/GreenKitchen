@@ -18,9 +18,9 @@
 		if(num4==""){window.alert("请填写自我描述");return false;}
 	}
 	</script> 
-	<script type="text/javascript" src="/js/jquery-1.3.1.js" ></script>
-	<script type="text/javascript" src="/js/ajax/ajax_reg.js" ></script>
-	<link rel="stylesheet" type="text/css" href="../../css/public/common.css" />
+	<script type="text/javascript" src="${pageContext.request.contextPath}/js/jquery-1.3.1.js" ></script>
+	<script type="text/javascript" src="${pageContext.request.contextPath}/js/ajax/ajax_reg.js" ></script>
+	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/public/common.css" />
 </head>
 
 <body>
@@ -30,7 +30,7 @@
 		
 		<div style="margin-left:300px;margin-top: 50px;float:left;width:600px">
 	    <h3>用户注册</h3>
-	    <form action="/info/register.action" method="post" name="register" onsubmit="return submitCheck()">
+	    <form action="${pageContext.request.contextPath}/info/register.action" method="post" name="register" onsubmit="return submitCheck()">
 	    <table style="line-height:50px">
 	    	<tr><td>用户名：</td><td><input style="width:300px;height:25px;" type="text" name="name" onclick="hide()" /></td><td width="150px">　　<span class="spanVal" id="true">用户名通过</span><span class="spanVal" id="false">用户名存在请更换</span></td></tr>
 	    	<tr><td>密码：</td><td><input  style="width:300px;height:25px;" type="password" name="password" onclick="checkName()" /></td></tr>

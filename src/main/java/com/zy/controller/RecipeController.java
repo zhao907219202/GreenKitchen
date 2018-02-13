@@ -61,7 +61,6 @@ public class RecipeController {
 		modelAndView.addObject("recipe", recipe);
 		modelAndView.addObject("steps", steps);
 
-		// ���۷�ҳ
 		int pageNow = 1;
 		int pageSize = 2;
 		int pageCount = this.commentService.getCommentPageCount(recipe_id,
@@ -74,7 +73,6 @@ public class RecipeController {
 		modelAndView.addObject("pageNow", pageNow);
 		modelAndView.addObject("comments", comments);
 
-		// �ж��Ƿ��ղ�
 		User loginuser = (User) session.getAttribute("loginuser");
 		if(loginuser==null){
 			modelAndView.addObject("hasCollected", "no");

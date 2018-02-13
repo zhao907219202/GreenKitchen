@@ -173,7 +173,7 @@ public class IssueController {
 		this.saveMaterial(recipe_id);
 		response.setCharacterEncoding("utf-8");
 		PrintWriter out = response.getWriter();
-		out.write("<script>alert(\"发布成功\");window.location.href=\"/info/goLoginView.action\";</script>");
+		out.write("<script>alert(\"发布成功\");window.location.href=\"/GreenKitchen/info/goLoginView.action\";</script>");
 		return null;
 	}
 
