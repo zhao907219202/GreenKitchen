@@ -57,7 +57,6 @@ public class IssueController {
 	public ModelAndView stepOne(Recipe recipe, MultipartFile recipe_pic,
 			HttpSession session) throws IOException {
 
-		// �����ϴ����²���
 		Recipe recipeNew = new Recipe();
 		recipeNew.setId(1);
 		recipeNew.setLikednum(0);
@@ -76,12 +75,10 @@ public class IssueController {
 			recipeNew.setDescription(description);
 		recipeService.add(recipeNew);
 
-		// �����ϴ���ͼƬ
 		String pic_path = "D:\\JavaWeb\\PictureServer\\upload\\temp\\recipe\\";
 		Recipe recipeReal = recipeService.getNewestRecipeByUser(loginuser);
 		String filename = recipeReal.getId() + ".jpg";
 		File newFile = new File(pic_path + filename);
-		// ���ڴ��е�����д�����
 		recipe_pic.transferTo(newFile);
 
 		ModelAndView modelAndView = new ModelAndView();
@@ -96,7 +93,6 @@ public class IssueController {
 			@RequestParam("files") MultipartFile[] files, String note,
 			String label) throws Exception {
 
-		// �������ϸ�����Ϣ
 		String main_spice = null;
 		String main_amount = null;
 		String assist_spice = null;
@@ -128,12 +124,9 @@ public class IssueController {
 			}
 		}
 
-		// �����ϴ���ͼƬ
 		if (files != null && files.length > 0) {
-			// ѭ����ȡfile�����е��ļ�
 			for (int i = 1; i <= files.length; i++) {
 				MultipartFile file = files[i - 1];
-				// �����ļ�
 				String pic_path = "D:\\JavaWeb\\PictureServer\\upload\\temp\\recipe\\";
 				String filename = recipe_id + "-" + i + ".jpg";
 				File newFile = new File(pic_path + filename);
@@ -141,7 +134,6 @@ public class IssueController {
 			}
 		}
 
-		// ���沽������
 		for (int i = 1; i < stepNum; i++) {
 			String stepContent = request.getParameter("step_content_" + i);
 			if (!StringUtil.isEmpty(stepContent)) {
@@ -154,7 +146,6 @@ public class IssueController {
 			}
 		}
 
-		// ����С��ʿ
 		if (!StringUtil.isEmpty(note)) {
 			Recipe recipe = (Recipe) recipeService.findById(Recipe.class,
 					recipe_id);
@@ -162,7 +153,6 @@ public class IssueController {
 			recipeService.update(recipe);
 		}
 
-		// �����ǩ
 		if (!StringUtil.isEmpty(label)) {
 			String[] labels = label.split(" ");
 			List<RecipeType> recipeTypes = new ArrayList<RecipeType>();
@@ -180,12 +170,10 @@ public class IssueController {
 			}
 		}
 		
-		//�������ϸ��� �������ʳ����Ϣ
 		this.saveMaterial(recipe_id);
-
 		response.setCharacterEncoding("utf-8");
 		PrintWriter out = response.getWriter();
-		out.write("<script>alert(\"�����ɹ���\");window.location.href=\"/info/goLoginView.action\";</script>");
+		out.write("<script>alert(\"发布成功\");window.location.href=\"/info/goLoginView.action\";</script>");
 		return null;
 	}
 
