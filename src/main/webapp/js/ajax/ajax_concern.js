@@ -14,7 +14,7 @@ function doConcern() {
 	createXMLHttpRequest();
 	if (xmlrequest) {
 		//准备发送请求
-		var req = "/GreenKitchen/ajax/doConcern.action?user_id="+user_id;
+		var req = "/ajax/doConcern.action?user_id="+user_id;
 			//打开请求
 		xmlrequest.open("get", req, true);
 			//指定处理结果的函数
@@ -35,7 +35,7 @@ function handleConcern(){
 				}
 				else if(result=="false"){
 					alert("请先登录！");
-					window.location.href="/GreenKitchen/info/goLoginView.action";
+					window.location.href="/info/goLoginView.action";
 				}
 			}
 		}
@@ -46,7 +46,7 @@ function cancelConcern() {
 	createXMLHttpRequest();
 	if (xmlrequest) {
 		//准备发送请求
-		var req = "/GreenKitchen/ajax/cancelConcern.action?user_id="+user_id;
+		var req = "/ajax/cancelConcern.action?user_id="+user_id;
 			//打开请求
 		xmlrequest.open("get", req, true);
 			//指定处理结果的函数
@@ -67,7 +67,7 @@ function handleCancelConcern(){
 			}
 			else if(result=="false"){
 				alert("请先登录！");
-				window.location.href="/GreenKitchen/info/goLoginView.action";
+				window.location.href="/info/goLoginView.action";
 			}
 		}
 	}

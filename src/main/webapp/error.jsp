@@ -15,6 +15,6 @@
   
   <body>
      	出现错误！
-     	<a href="/GreenKitchen">返回首页</a>
+     	<a href="">返回首页</a>
   </body>
 </html>

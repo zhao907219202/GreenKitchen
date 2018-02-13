@@ -14,7 +14,7 @@ function checkName() {
 	if (xmlrequest) {
 		//准备发送请求
 		//window.alert($('input[name=name]').val());
-		var req = "/GreenKitchen/CheckUserName?name=" +$('input[name=name]').val();
+		var req = "/CheckUserName?name=" +$('input[name=name]').val();
 			//打开请求
 		xmlrequest.open("get", req, true);
 			//指定处理结果的函数

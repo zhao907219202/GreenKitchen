@@ -7,8 +7,8 @@
 
 
 <title>绿色厨房</title>
-	<link rel="stylesheet" type="text/css" href="/GreenKitchen/css/public/common.css" />
-	<link rel="stylesheet" type="text/css" href="/GreenKitchen/css/recipe/recipeMaterialList.css" />
+	<link rel="stylesheet" type="text/css" href="../../css/public/common.css" />
+	<link rel="stylesheet" type="text/css" href="../../css/recipe/recipeMaterialList.css" />
 </head>
   
   <body>
@@ -18,9 +18,9 @@
 	
 	<div class="main_List">
 	 	<div class="nav" style="background-color: #f8f8f8;">
-			<a href="/GreenKitchen/recipe/goSelected.action"><font class="font13">精选</font></a>　　
-			<a href="/GreenKitchen/recipe/goTypeIndex.action"><font class="font13">菜谱种类</font></a> 　　
-			<a href="/GreenKitchen/material/goMaterialIndex.action"><font class="font13">食材分类</font></a>
+			<a href="/recipe/goSelected.action"><font class="font13">精选</font></a>　　
+			<a href="/recipe/goTypeIndex.action"><font class="font13">菜谱种类</font></a> 　　
+			<a href="/material/goMaterialIndex.action"><font class="font13">食材分类</font></a>
 		</div>
 		
 		  <div class="type_one">
@@ -30,18 +30,18 @@
 				
 				<c:forEach items="${list}" var="materialtwos">
 					<div class="type_list">
-						<div class="type_two"><a href="/GreenKitchen/material/goMaterialList.action?materialone_id=${materialtwos[0].materialone.id}"><font class="font15">${materialtwos[0].materialone.name}</font></a>
+						<div class="type_two"><a href="/material/goMaterialList.action?materialone_id=${materialtwos[0].materialone.id}"><font class="font15">${materialtwos[0].materialone.name}</font></a>
 						</div> 
 						<div class="elements">
 						<c:forEach items="${materialtwos}" var="material" varStatus="status">
 							<div class="element">
-								<a href="/GreenKitchen/material/goMaterialDetail.action?material_id=${material.id}"><img style="width:65px;height:65px"
+								<a href="/material/goMaterialDetail.action?material_id=${material.id}"><img style="width:65px;height:65px"
 									src="/pic/material/${material.pictureName }.jpg" />
 									<div class="font2" style="margin-top: 5px;text-align: center;">${material.name}</div></a>
 							</div>	
 						<c:if test="${status.count ==10 }">					
 						<div class="more_elements" >
-							<a href="/GreenKitchen/material/goMaterialList.action?materialone_id=${materialtwos[0].materialone.id}"><font class="font15" >更多</font></a>
+							<a href="/material/goMaterialList.action?materialone_id=${materialtwos[0].materialone.id}"><font class="font15" >更多</font></a>
 						</div>
 						</c:if>
 						</c:forEach>

@@ -5,8 +5,8 @@
 <html>
 <head>
 <title>绿色厨房</title>
-	<link rel="stylesheet" type="text/css" href="/GreenKitchen/css/public/common.css" />
-	<link rel="stylesheet" type="text/css" href="/GreenKitchen/css/rank/rankIndex.css" />
+	<link rel="stylesheet" type="text/css" href="../../css/public/common.css" />
+	<link rel="stylesheet" type="text/css" href="../../css/rank/rankIndex.css" />
 </head>
 
 <body>
@@ -15,7 +15,7 @@
 	<div class="main_rank">
 		<div class="hot_recipe_list">
 			<div class="title"><font class="font14">热门菜谱榜</font> 
-		 		<a href="/GreenKitchen/rank/goRankDetail.action?title_id=1" style="float:right;margin-right: 20px;"><font class="font16">更多>></font></a>
+		 		<a href="/rank/goRankDetail.action?title_id=1" style="float:right;margin-right: 20px;"><font class="font16">更多>></font></a>
 			</div>
 			<table class="list_table">
 				<c:forEach items="${recipes}" var="recipe" varStatus="status">
@@ -26,7 +26,7 @@
 						<c:if test="${status.count>3}">
 						<td><font class="font18">${status.count}</td>
 						</c:if>
-						<td style="width:215px;"><a href="/GreenKitchen/recipe/goRecipeDetail.action?recipe_id=${recipe.id}"><font class="font16">${recipe.title}</font></a></td>
+						<td style="width:215px;"><a href="/recipe/goRecipeDetail.action?recipe_id=${recipe.id}"><font class="font16">${recipe.title}</font></a></td>
 						<td><font class="font18">${recipe.collectednum}收藏</font></td>
 					</tr>
 				</c:forEach>
@@ -35,7 +35,7 @@
 		
 		<div class="hot_user_list">
 			<div class="title"><font class="font14">热门用户榜</font> 
-		 		<a href="/GreenKitchen/rank/goRankUserDetail.action" style="float:right;margin-right: 20px;"><font class="font16">更多>></font></a>
+		 		<a href="/rank/goRankUserDetail.action" style="float:right;margin-right: 20px;"><font class="font16">更多>></font></a>
 			</div>
 			<table class="list_table">
 				<c:forEach items="${users}" var="user" varStatus="status">
@@ -46,7 +46,7 @@
 						<c:if test="${status.count>3}">
 						<td><font class="font18">${status.count}</td>
 						</c:if>
-						<td style="width:215px;"><a href="/GreenKitchen/info/goUserIndex.action?user_id=${user.id }"><font class="font16">${user.username}</font></a></td>
+						<td style="width:215px;"><a href="/info/goUserIndex.action?user_id=${user.id }"><font class="font16">${user.username}</font></a></td>
 						<td><font class="font18">${user.fansnum}粉丝</font></td>
 					</tr>
 				</c:forEach>
@@ -55,7 +55,7 @@
 	
 		<div class="hot_slim_list">
 			<div class="title"><font class="font14">美容减肥榜</font> 
-		 		<a href="/GreenKitchen/rank/goRankDetail.action?title_id=2" style="float:right;margin-right: 20px;"><font class="font16">更多>></font></a>
+		 		<a href="/rank/goRankDetail.action?title_id=2" style="float:right;margin-right: 20px;"><font class="font16">更多>></font></a>
 			</div>
 			<table class="list_table">
 				<c:forEach items="${slim_dishes}" var="recipe" varStatus="status">
@@ -66,7 +66,7 @@
 						<c:if test="${status.count>3}">
 						<td><font class="font18">${status.count}</td>
 						</c:if>
-						<td style="width:215px;"><a href="/GreenKitchen/recipe/goRecipeDetail.action?recipe_id=${recipe.id}"><font class="font16">${recipe.title}</font></a></td>
+						<td style="width:215px;"><a href="/recipe/goRecipeDetail.action?recipe_id=${recipe.id}"><font class="font16">${recipe.title}</font></a></td>
 						<td><font class="font18">${recipe.collectednum}收藏</font></td>
 					</tr>
 				</c:forEach>
@@ -76,7 +76,7 @@
 		
 		<div class="hot_child_list">
 			<div class="title"><font class="font14">儿童食谱榜</font> 
-		 		<a href="/GreenKitchen/rank/goRankDetail.action?title_id=3" style="float:right;margin-right: 20px;"><font class="font16">更多>></font></a>
+		 		<a href="/rank/goRankDetail.action?title_id=3" style="float:right;margin-right: 20px;"><font class="font16">更多>></font></a>
 			</div>
 			<table class="list_table">
 				<c:forEach items="${child_dishes}" var="recipe" varStatus="status">
@@ -87,7 +87,7 @@
 						<c:if test="${status.count>3}">
 						<td><font class="font18">${status.count}</td>
 						</c:if>
-						<td style="width:215px;"><a href="/GreenKitchen/recipe/goRecipeDetail.action?recipe_id=${recipe.id}"><font class="font16">${recipe.title}</font></a></td>
+						<td style="width:215px;"><a href="/recipe/goRecipeDetail.action?recipe_id=${recipe.id}"><font class="font16">${recipe.title}</font></a></td>
 						<td><font class="font18">${recipe.collectednum}收藏</font></td>
 					</tr>
 				</c:forEach>

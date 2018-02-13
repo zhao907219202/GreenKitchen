@@ -38,9 +38,7 @@ public class AjaxController {
 
 		response.setContentType("text/html;charset=utf-8");
 		PrintWriter out = response.getWriter();
-		// ʹ��ajax Ҫ���û���
 		response.setHeader("Cache-control", "no-cache");
-		// �ж��û��Ƿ��Ѿ���¼
 		User loginuser = (User) session.getAttribute("loginuser");
 		if (loginuser == null) {
 			out.write("false");
@@ -85,9 +83,7 @@ public class AjaxController {
 
 		response.setContentType("text/html;charset=utf-8");
 		PrintWriter out = response.getWriter();
-		// ʹ��ajax Ҫ���û���
 		response.setHeader("Cache-control", "no-cache");
-		// �ж��û��Ƿ��Ѿ���¼
 		User loginuser = (User) session.getAttribute("loginuser");
 		if (loginuser == null) {
 			out.write("false");
@@ -110,9 +106,7 @@ public class AjaxController {
 
 		response.setContentType("text/html;charset=utf-8");
 		PrintWriter out = response.getWriter();
-		// ʹ��ajax Ҫ���û���
 		response.setHeader("Cache-control", "no-cache");
-		// �ж��û��Ƿ��Ѿ���¼
 		User loginuser = (User) session.getAttribute("loginuser");
 		if (loginuser == null) {
 			out.write("false");

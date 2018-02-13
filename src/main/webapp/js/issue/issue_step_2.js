@@ -4,7 +4,7 @@ function addOneRow(obj){
 	var index = parseInt(obj.id)+1;
 	document.getElementById(obj.id).id=index;
 	$("#step_table").append("<tr><td style=\"width:150px\">" +
-			"<img id=\"origin_"+index+"\"  onclick=\"imgClick(this)\" src=\"/GreenKitchen/images/issue/issue_step.jpg\" " +
+			"<img id=\"origin_"+index+"\"  onclick=\"imgClick(this)\" src=\"/images/issue/issue_step.jpg\" " +
 			"style=\"width:140px;height:90px;\"/><img id=\"preview_"+index+"\" style=\"width:140px;height:90px;display:none\"/>"+
 			"<input type=\"file\" name=\"files\" style=\"display:none\" id=\"upload_"+index+"\" onchange=\"imgPreview(this)\"/>" +
 			"</td><td><textarea name=\"step_content_"+index+"\" rows=\"6\" cols=\"60\" style=\"resize: none;\"></textarea></td></tr>");

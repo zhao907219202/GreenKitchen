@@ -38,7 +38,7 @@ public class ReplyController {
 		response.setCharacterEncoding("utf-8");
 		PrintWriter out = response.getWriter();
 		if(loginuser==null){
-			out.write("<script>alert(\"Please Login\");window.location.href=\"/GreenKitchen/info/goLoginView.action\";</script>");
+			out.write("<script>alert(\"Please Login\");window.location.href=\"/info/goLoginView.action\";</script>");
 			return null;
 		}
 		Message message = new Message();
@@ -49,7 +49,7 @@ public class ReplyController {
 		SimpleDateFormat dateFormat =new SimpleDateFormat("yyyy-MM-dd hh-mm-ss");
 		message.setTimestamp(dateFormat.format(new Date()));
 		messageService.add(message);
-		out.write("<script>alert(\"Comment Success\");window.location.href=\"/GreenKitchen/info/goUserIndex.action?user_id="+user_id+"\";</script>");
+		out.write("<script>alert(\"Comment Success\");window.location.href=\"/info/goUserIndex.action?user_id="+user_id+"\";</script>");
 		return null;
 	}
 	
@@ -60,7 +60,7 @@ public class ReplyController {
 		response.setCharacterEncoding("utf-8");
 		PrintWriter out = response.getWriter();
 		if(loginuser==null){
-			out.write("<script>alert(\"Please Login\");window.location.href=\"/GreenKitchen/info/goLoginView.action\";</script>");
+			out.write("<script>alert(\"Please Login\");window.location.href=\"/info/goLoginView.action\";</script>");
 			return null;
 		}
 		Message message = (Message) messageService.findById(Message.class, message_id);
@@ -73,7 +73,7 @@ public class ReplyController {
 		messagereply.setUserByReceiverId(message.getUserByWriterId());
 		messagereply.setUserByWriterId(loginuser);
 		messageReplyService.add(messagereply);
-		out.write("<script>alert(\"Reply Success\");window.location.href=\"/GreenKitchen/info/goUserIndex.action?user_id="+user_id+"\";</script>");
+		out.write("<script>alert(\"Reply Success\");window.location.href=\"/info/goUserIndex.action?user_id="+user_id+"\";</script>");
 		return null;
 	}
 	
@@ -84,7 +84,7 @@ public class ReplyController {
 		response.setCharacterEncoding("utf-8");
 		PrintWriter out = response.getWriter();
 		if(loginuser==null){
-			out.write("<script>alert(\"Please Login\");window.location.href=\"/GreenKitchen/info/goLoginView.action\";</script>");
+			out.write("<script>alert(\"Please Login\");window.location.href=\"/info/goLoginView.action\";</script>");
 			return null;
 		}
 		Comment comment = new Comment();
@@ -95,7 +95,7 @@ public class ReplyController {
 		comment.setRecipe((Recipe)recipeService.findById(Recipe.class, recipe_id));
 		comment.setUser(loginuser);
 		commentService.addCommentAndUpdateCommentNum(comment);
-		out.write("<script>alert(\"Comment Success\");window.location.href=\"/GreenKitchen/recipe/goRecipeDetail.action?recipe_id="+recipe_id+"\";</script>");
+		out.write("<script>alert(\"Comment Success\");window.location.href=\"/recipe/goRecipeDetail.action?recipe_id="+recipe_id+"\";</script>");
 		return null;
 	}
 	
@@ -106,7 +106,7 @@ public class ReplyController {
 		response.setCharacterEncoding("utf-8");
 		PrintWriter out = response.getWriter();
 		if(loginuser==null){
-			out.write("<script>alert(\"Please Login\");window.location.href=\"/GreenKitchen/info/goLoginView.action\";</script>");
+			out.write("<script>alert(\"Please Login\");window.location.href=\"/info/goLoginView.action\";</script>");
 			return null;
 		}
 		Commentreply commentreply = new Commentreply();
@@ -119,7 +119,7 @@ public class ReplyController {
 		commentreply.setUserByReceiverId(comment.getUser());
 		commentreply.setUserByWriterId(loginuser);
 		commentReplyService.add(commentreply);
-		out.write("<script>alert(\"Reply Success\");window.location.href=\"/GreenKitchen/recipe/goRecipeDetail.action?recipe_id="+recipe_id+"\";</script>");
+		out.write("<script>alert(\"Reply Success\");window.location.href=\"/recipe/goRecipeDetail.action?recipe_id="+recipe_id+"\";</script>");
 		return null;
 	}
 	

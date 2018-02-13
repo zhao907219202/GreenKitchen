@@ -47,7 +47,6 @@ public class MaterialController {
 				.getMaterialtwoById(material_id);
 		modelAndView.addObject("material", materialtwo);
 
-		// ��ҳ��ѯʳ����ز���
 		int pageNow = 1;
 		int pageSize = 8;
 		int pageCount = this.recipeMaterialService.getRecipePageCount(

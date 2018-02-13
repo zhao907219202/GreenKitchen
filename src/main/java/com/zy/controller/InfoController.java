@@ -50,7 +50,7 @@ public class InfoController {
 		String checkcode = (String) request.getSession().getAttribute(
 				"checkcode");
 		if (!request.getParameter("checkcode").equals(checkcode)) {
-			modelAndView.addObject("info", "��֤����������");
+			modelAndView.addObject("info", "验证码输入有误");
 			modelAndView.setViewName("info/login");
 			return modelAndView;
 		}
@@ -63,13 +63,13 @@ public class InfoController {
 		if (user != null) {
 			request.getSession().setAttribute("loginuser", user);
 			try {
-				response.sendRedirect("/GreenKitchen/info/goUserIndex.action?user_id="
+				response.sendRedirect("/info/goUserIndex.action?user_id="
 						+ user.getId());
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
 		} else {
-			request.setAttribute("info", "�û������벻��ȷ");
+			request.setAttribute("info", "用户名密码不正确");
 			modelAndView.setViewName("info/login");
 		}
 		return modelAndView;
@@ -109,7 +109,7 @@ public class InfoController {
 
 		response.setCharacterEncoding("utf-8");
 		PrintWriter out = response.getWriter();
-		out.write("<script>alert(\"ע��ɹ������� �ҵı��� ��¼��\");window.location.href=\"/GreenKitchen/info/goLoginView.action\";</script>");
+		out.write("<script>alert(\"注册成功，请点击'我的宝典'登录\");window.location.href=\"/info/goLoginView.action\";</script>");
 		return null;
 	}
 
@@ -120,7 +120,7 @@ public class InfoController {
 		response.setCharacterEncoding("utf-8");
 		PrintWriter out = response.getWriter();
 		if(loginuser==null){
-			out.write("<script>alert(\"���ȵ�¼��\");window.location.href=\"/GreenKitchen/info/goLoginView.action\";</script>");
+			out.write("<script>alert(\"请先登录\");window.location.href=\"/info/goLoginView.action\";</script>");
 			return null;
 		}
 		loginuser = userService.findUserByName(loginuser.getUsername());
@@ -140,7 +140,7 @@ public class InfoController {
 		userService.updateUser(originalUser);
 		response.setCharacterEncoding("utf-8");
 		PrintWriter out = response.getWriter();
-		out.write("<script>alert(\"�޸ĳɹ���\");window.location.href=\"/GreenKitchen/info/goLoginView.action\";</script>");
+		out.write("<script>alert(\"修改成功\");window.location.href=\"/info/goLoginView.action\";</script>");
 		return null;
 	}
 
@@ -149,7 +149,6 @@ public class InfoController {
 			HttpSession session) {
 		ModelAndView modelAndView = new ModelAndView();
 		User user = (User) userService.findById(User.class, user_id);
-		// �û���ӵ�в��׷�ҳ
 		int pageNow = 1;
 		int pageSize = 8;
 		int pageCount = this.recipeService.getRecipePageCountByUser(pageSize,
@@ -194,7 +193,6 @@ public class InfoController {
 				.size());
 		modelAndView.addObject("recipeNum", user.getRecipes().size());
 		modelAndView.addObject("user", user);
-		// ��ҳ��ѯ���û���ע����
 		int pageNow = 1;
 		int pageSize = 8;
 		int pageCount = this.concernService.getConcernsPageCountByUser(user_id,
@@ -322,7 +320,6 @@ public class InfoController {
 				.size());
 		modelAndView.addObject("user", user);
 
-		// �жϵ�¼�û����Ƿ��Ѿ���ע���û�
 		User loginuser = (User) session.getAttribute("loginuser");
 		if (loginuser == null)
 			modelAndView.addObject("hasConcerned", "no");

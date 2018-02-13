@@ -5,8 +5,8 @@
 <html>
 <head>
 <title>绿色厨房</title>
-	<link rel="stylesheet" type="text/css" href="/GreenKitchen/css/public/common.css" />
-	<link rel="stylesheet" type="text/css" href="/GreenKitchen/css/issue/issue_step_1.css" />
+	<link rel="stylesheet" type="text/css" href="../../css/public/common.css" />
+	<link rel="stylesheet" type="text/css" href="../../css/issue/issue_step_1.css" />
 	<script type='text/javascript' language="javascript">
 	function checkValue(){
 		var title=document.issue_step_1.title.value;
@@ -54,9 +54,9 @@
 			<font class="font7">从现在起，不做孤独的美食家。</font>
 		</div>
 		<div class="issue_input">
-			<form action="/GreenKitchen/issue/stepOne.action" method="post" enctype="multipart/form-data" name="issue_step_1">
+			<form action="/issue/stepOne.action" method="post" enctype="multipart/form-data" name="issue_step_1">
 			<input type="text" name="title" value="菜谱名称" style="width:595px;height:40px;"/>
-			<img id="origin" onclick="imgClick()" src="/GreenKitchen/images/issue/cover.jpg" style="width:600px;height:400px;margin-top:15px;"/>
+			<img id="origin" onclick="imgClick()" src="../../images/issue/cover.jpg" style="width:600px;height:400px;margin-top:15px;"/>
 			<img id="preview" style="width:600px;height:400px;margin-top:15px;display:none"/>
 			<input type="file" name="recipe_pic" style="display:none" id="upload_input" onchange="imgPreview(this)"/>
 			<div class="issue_diff_time">

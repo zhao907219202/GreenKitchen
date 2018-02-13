@@ -19,7 +19,7 @@
 
 	<div class="main">
 		<div class="nav" style="background-color: #f8f8f8;">
-			<a href="/recipe/goSelected.action"><font class="font13">精选</font></a>　　<font class="font12">菜谱种类</font> 　　<a href="/GreenKitchen/material/goMaterialIndex.action"><font class="font13">食材分类</font></a>
+			<a href="/recipe/goSelected.action"><font class="font13">精选</font></a>　　<font class="font12">菜谱种类</font> 　　<a href="/material/goMaterialIndex.action"><font class="font13">食材分类</font></a>
 		</div>
 
 		<div class="type_panel">

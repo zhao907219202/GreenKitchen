@@ -2,7 +2,7 @@ body {
 	
 }
 
-/*定义常用的字体样式*/
+/*锟斤拷锟藉常锟矫碉拷锟斤拷锟斤拷锟斤拷式*/
 .font1 {
 	color: #12937C;
 	font-weight: bold;
@@ -29,7 +29,7 @@ body {
 	font-size: 28px;
 	color: black;
 	font-weight: bold;
-	font-family: 黑体;
+	font-family: 锟斤拷锟斤拷;
 }
 
 .font6 {
@@ -106,13 +106,13 @@ body {
 }
 
 
-/*定义几款按钮样式*/
+/*锟斤拷锟藉几锟筋按钮锟斤拷式*/
 .sub {
 	background-color: #3B5888;
 	color: white;
 	padding: 2px 0 0 0;
 }
-/*有一款按钮*/
+/*锟斤拷一锟筋按钮*/
 .button1 {
 	background-color: #ffffff;
 	cursor: hand;
@@ -125,7 +125,7 @@ body {
 	border: none;
 }
 
-/*提示文字底板*/
+/*锟斤拷示锟斤拷锟街底帮拷*/
 .spanVal {
 	background-color: #FFFFCD;
 	font-size: 12px;
@@ -136,7 +136,7 @@ body {
 	display: none;
 }
 
-/*一般链接*/
+/*一锟斤拷锟斤拷锟斤拷*/
 a.xh:link {
 	font-size: 12px;
 	color: #3B5888;
@@ -161,7 +161,7 @@ a.xh:active {
 	text-decoration: none;
 }
 
-/*应用连接样式*/
+/*应锟斤拷锟斤拷锟斤拷锟斤拷式*/
 a.yy:link {
 	font-size: 16px;
 	color: #3B5888;
@@ -195,14 +195,14 @@ a.yy:active {
    	cursor:hand;
 	width:   161px;
 	height:   41px;
-   	background-image:   url(/GreenKitchen/images/info/regbtn.gif);
+   	background-image:   url(/images/info/regbtn.gif);
    	background-repeat:   no-repeat;
    	background-position:   center;
    	text-align:   center;
    	border:  none;
  }
  
-  /*提示文字底板*/
+  /*锟斤拷示锟斤拷锟街底帮拷*/
 .spanVal {
 	background-color: #FFFFCD;
 	font-size: 12px;

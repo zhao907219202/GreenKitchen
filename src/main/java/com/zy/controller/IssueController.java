@@ -47,7 +47,7 @@ public class IssueController {
 		response.setCharacterEncoding("utf-8");
 		PrintWriter out = response.getWriter();
 		if (loginuser == null) {
-			out.write("<script>alert(\"���ȵ�¼��\");window.location.href=\"/GreenKitchen/info/goLoginView.action\";</script>");
+			out.write("<script>alert(\"���ȵ�¼��\");window.location.href=\"/info/goLoginView.action\";</script>");
 			return null;
 		}
 		return "issue/issue_step_1";
@@ -185,7 +185,7 @@ public class IssueController {
 
 		response.setCharacterEncoding("utf-8");
 		PrintWriter out = response.getWriter();
-		out.write("<script>alert(\"�����ɹ���\");window.location.href=\"/GreenKitchen/info/goLoginView.action\";</script>");
+		out.write("<script>alert(\"�����ɹ���\");window.location.href=\"/info/goLoginView.action\";</script>");
 		return null;
 	}
 
