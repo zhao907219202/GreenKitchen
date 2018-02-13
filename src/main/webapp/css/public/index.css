@@ -1,0 +1,113 @@
+.middle {
+	margin: 0 auto;
+	width: 1000px;
+}
+
+.recipes {
+	margin: 0 auto;
+	height: 600px;
+	width: 1000px;
+}
+
+.recipes .recommend {
+	width: 970px;
+	height: 25px;
+	float: left;
+	font-weight: bold;
+	margin-top: 10px;
+	margin-left: 30px;
+	font-size: 22px;
+	color: #12937C;
+}
+
+.recipes .repeatee{
+	float:left;
+	margin-left: 20px;
+}
+
+.recipes .element {
+	float: left;
+	margin: 10px;
+}
+
+.themes {
+	width: 750px;
+	height: 250px;
+	float: left;
+	margin-top: 10px;
+}
+
+.themes .title {
+	margin-left: 30px;
+	height: 25px;
+	width: 750px;
+}
+
+.themes .content {
+	width: 750px;
+	height: 200px;
+	margin-top: 10px;
+	margin-left: 10px;
+}
+
+.themes .content .element {
+	padding-top: 25px;
+	margin-left: 50px;
+}
+
+.material {
+	float: left;
+	width: 750px;
+	height: 270px;
+}
+
+.material .title {
+	margin-left: 30px;
+	height: 25px;
+	width: 750px;
+}
+
+.material table {
+	margin-left: 10px;
+	margin-top: 15px;
+}
+
+.material .element {
+	float: left;
+	margin-left: 25px;
+	margin-top: 10px;
+}
+
+.list {
+	width: 250px;
+	float: right;
+	height: 520px;
+	margin-top: 10px;
+}
+
+.list .title {
+	margin-left: 30px;
+	height: 25px;
+	width: 250px;
+}
+
+.list table{
+	float: left;
+	margin-left: 35px;
+	margin-top: 15px;
+}
+
+.list tr{
+	line-height: 32px;
+	list-style-type:none;
+}
+
+.list td .concerned{
+	display: none;
+}
+
+
+.list .font {
+	color: #808080;
+	font-size: 18px;
+}

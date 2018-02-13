@@ -1,0 +1,34 @@
+.main {
+	width:1000px;
+	margin: 0 auto;
+}
+
+.nav {
+	float:left;
+	padding-left: 40px;
+	padding-top:10px;
+	margin-top: 20px;
+	width:950px;
+	height:30px;
+}
+
+.type_panel{
+	float:left;
+	width:1000px;
+	margin-top: 20px;
+	background-color: #F8F8F8;
+}
+
+.type_title{
+	margin-left:30px;
+	float:left;
+	width:900px;
+	margin-top: 10px;
+}
+
+.type_body{
+	margin-left:35px;
+	float:left;
+	margin-top: 15px;
+}
+

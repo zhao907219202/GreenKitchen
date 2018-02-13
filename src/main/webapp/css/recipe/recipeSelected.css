@@ -1,0 +1,46 @@
+.main {
+	width:1000px;
+	margin: 0 auto;
+}
+
+.nav {
+	float:left;
+	padding-left: 40px;
+	padding-top:10px;
+	margin-top: 20px;
+	width:960px;
+	height:30px;
+}
+
+.recipes {
+	margin: 0 auto;
+	height: 900px;
+	width: 1000px;
+	margin-top: 20px;
+	float:left;
+}
+
+.recipes .recommend {
+	width: 970px;
+	height: 25px;
+	float: left;
+	font-weight: bold;
+	margin-top: 10px;
+	margin-left: 30px;
+	font-size: 20px;
+	color: black;
+}
+
+.recipes .repeatee{
+	float:left;
+	margin-left: 20px;
+}
+
+.recipes .element {
+	float: left;
+	margin: 10px;
+}
+
+.pages{
+	text-align: center;
+}

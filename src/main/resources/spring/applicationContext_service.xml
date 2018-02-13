@@ -1,0 +1,42 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+		http://www.springframework.org/schema/beans/spring-beans-3.2.xsd 
+		http://www.springframework.org/schema/mvc 
+		http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd 
+		http://www.springframework.org/schema/context 
+		http://www.springframework.org/schema/context/spring-context-3.2.xsd 
+		http://www.springframework.org/schema/aop 
+		http://www.springframework.org/schema/aop/spring-aop-3.2.xsd 
+		http://www.springframework.org/schema/tx 
+		http://www.springframework.org/schema/tx/spring-tx-3.2.xsd ">
+		
+<bean id="recipeService" class="com.zy.implement.RecipeService"/>
+
+<bean id="userService" class="com.zy.implement.UserService"/>
+
+<bean id="materialService" class="com.zy.implement.MaterialService"/>
+
+<bean id="stepService" class="com.zy.implement.StepService"/>
+
+<bean id="commentService" class="com.zy.implement.CommentService"/>
+
+<bean id="typeService" class="com.zy.implement.TypeService"/>
+
+<bean id="recipeMaterialService" class="com.zy.implement.RecipeMaterialService"/>
+
+<bean id="concernService" class="com.zy.implement.ConcernService"/>
+
+<bean id="userRecipeService" class="com.zy.implement.UserRecipeService"/>
+
+<bean id="messageService" class="com.zy.implement.MessageService"/>
+
+<bean id="commentReplyService" class="com.zy.implement.CommentReplyService"/>
+
+<bean id="messageReplyService" class="com.zy.implement.MessageReplyService"/>
+
+<bean id="recipeSpiceService" class="com.zy.implement.RecipeSpiceService"/>
+
+</beans>

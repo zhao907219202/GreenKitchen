@@ -1,0 +1,214 @@
+body {
+	
+}
+
+/*定义常用的字体样式*/
+.font1 {
+	color: #12937C;
+	font-weight: bold;
+	font-size: 22px;
+}
+
+.font2 {
+	color: #12937C;
+	font-size: 14px;
+}
+
+.font3 {
+	color: #12937C;
+	font-size: 12px;
+}
+
+.font4 {
+	color: #12937C;
+	font-size: 14px;
+	text-align: center;
+}
+
+.font5 {
+	font-size: 28px;
+	color: black;
+	font-weight: bold;
+	font-family: 黑体;
+}
+
+.font6 {
+	color: #12937C;
+	font-weight: bold;
+	font-size: 20px;
+}
+
+.font7 {
+	color: black;
+	font-size: 12px;
+}
+
+.font8 {
+	color: black;
+	font-weight: bold;
+	font-size: 22px;
+}
+
+.font9 {
+	color: #3B5888;
+	font-size: 14px;
+}
+
+.font10 {
+	font-size: 16px;
+	color: #808080;
+	font-weight: bold;
+	line-height: 30px;
+}
+
+.font11{
+	font-size: 14px;
+	color: #000000;
+	line-height: 30px;
+}
+
+.font12{
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.font13{
+	color: #12937C;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.font14 {
+	color: black;
+	font-weight: bold;
+	font-size: 16px;
+}
+
+.font15 {
+	color: #12937C;
+	font-size: 13px;
+	font-weight: bold;
+}
+
+.font16 {
+	color: #12937C;
+	font-size: 14px;
+}
+
+.font17 {
+	color: black;
+	font-size: 14px;
+}
+
+.font18 {
+	color: #999999;
+	font-size: 14px;
+}
+
+
+/*定义几款按钮样式*/
+.sub {
+	background-color: #3B5888;
+	color: white;
+	padding: 2px 0 0 0;
+}
+/*有一款按钮*/
+.button1 {
+	background-color: #ffffff;
+	cursor: hand;
+	width: 161px;
+	height: 41px;
+	background-image: url(/SRT/images/public/regbtn.gif);
+	background-repeat: no-repeat;
+	background-position: center;
+	text-align: center;
+	border: none;
+}
+
+/*提示文字底板*/
+.spanVal {
+	background-color: #FFFFCD;
+	font-size: 12px;
+	padding: 3px;
+	width: 220px;
+	height: 14px;
+	border: 3px #E7C437 solid;
+	display: none;
+}
+
+/*一般链接*/
+a.xh:link {
+	font-size: 12px;
+	color: #3B5888;
+	text-decoration: none;
+}
+
+a.xh:visited {
+	font-size: 12px;
+	color: #3B5888;
+	text-decoration: none;
+}
+
+a.xh:hover {
+	font-size: 12px;
+	color: #3B5888;
+	text-decoration: underline;
+}
+
+a.xh:active {
+	font-size: 12px;
+	color: #3B5888;
+	text-decoration: none;
+}
+
+/*应用连接样式*/
+a.yy:link {
+	font-size: 16px;
+	color: #3B5888;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+a.yy:visited {
+	font-size: 16px;
+	color: #3B5888;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+a.yy:hover {
+	font-size: 16px;
+	color: #3B5888;
+	text-decoration: underline;
+	font-weight: bold;
+}
+
+a.yy:active {
+	font-size: 16px;
+	color: #3B5888;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.button1{
+   	background-color:   #ffffff;
+   	cursor:hand;
+	width:   161px;
+	height:   41px;
+   	background-image:   url(/GreenKitchen/images/info/regbtn.gif);
+   	background-repeat:   no-repeat;
+   	background-position:   center;
+   	text-align:   center;
+   	border:  none;
+ }
+ 
+  /*提示文字底板*/
+.spanVal {
+	background-color: #FFFFCD;
+	font-size: 12px;
+	padding: 3px;
+	width:220px;
+	height:14px;
+	border: 3px #E7C437 solid;
+	display:none;
+}

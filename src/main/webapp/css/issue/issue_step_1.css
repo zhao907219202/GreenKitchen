@@ -1,0 +1,35 @@
+.main_body{
+	width:1000px;
+	margin: 0 auto;
+}
+
+.title{
+	float:left;
+	margin-left: 200px;	
+	padding-top: 30px;	
+}
+
+.issue_input{
+	float:left;
+	margin-left: 200px;
+	margin-top: 20px;
+	background-color: #F8F8F8;
+	width:600px;
+	height:750px;
+}
+
+.issue_diff_time{
+	margin-top: 20px;
+	float:left;
+}
+
+.recipe_description{
+	float:left;
+	margin-top: 20px;
+}
+
+.submit_button{
+	float:left;
+	margin-left: 200px;
+	margin-top: 20px;
+}

@@ -1,0 +1,54 @@
+.main_rank{
+	width:1000px;
+	margin: 0 auto;
+}
+
+.title{
+	width:280px;
+	float:left;
+	margin-left: 20px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.hot_recipe_list{
+	width:300px;
+	height:420px;
+	background-color: #F8F8F8;
+	float:left;
+	margin-top: 50px;
+	margin-left: 120px;
+}
+
+.hot_user_list{
+	width:300px;
+	height:420px;
+	background-color: #F8F8F8;
+	float:left;
+	margin-top: 50px;
+	margin-left: 120px;
+}
+
+.hot_slim_list{
+	width:300px;
+	height:420px;
+	background-color: #F8F8F8;
+	float:left;
+	margin-top: 70px;
+	margin-left: 120px;
+}
+
+.hot_child_list{
+	width:300px;
+	height:420px;
+	background-color: #F8F8F8;
+	float:left;
+	margin-top: 70px;
+	margin-left: 120px;
+}
+
+.list_table{
+	float:left;
+	margin-left:5px;
+	width:295px;
+}

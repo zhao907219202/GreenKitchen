@@ -1,0 +1,52 @@
+.main_body{
+	width:1000px;
+	background-color: #F8F8F8;
+	margin: 0 auto;
+}
+
+.title{
+	float:left;
+	margin-left: 200px;	
+	padding-top: 30px;	
+}
+.main_spice{
+	float:left;
+	width:300px;
+	margin-left: 185px;
+	margin-top: 30px;
+}
+
+.assist_spice{
+	float:left;
+	width:300px;
+	margin-left: 30px;
+	margin-top: 30px;
+}
+
+.recipe_step{
+	float:left;
+	margin-top:20px;
+	margin-left: 185px;
+	width:615px;
+}
+
+.recipe_note{
+	float:left;
+	margin-top: 10px;
+	margin-left: 185px;
+	width:615px;
+}
+
+.recipe_label{
+	float:left;
+	margin-top: 20px;
+	margin-left: 185px;
+	width:615px;
+}
+
+.submit_button{
+	float:left;
+	margin-left: 360px;
+	width:615px;
+	margin-top: 20px;
+}
