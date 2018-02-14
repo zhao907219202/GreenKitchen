@@ -5,26 +5,26 @@
 <html>
 <head>
 <title>绿色厨房</title>
-	<link rel="stylesheet" type="text/css"	href="${pageContext.request.contextPath}/css/recipe/recipeDetail.css" />
-	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/public/common.css" />
+	<link rel="stylesheet" type="text/css"	href="/GreenKitchen/css/recipe/recipeDetail.css" />
+	<link rel="stylesheet" type="text/css" href="/GreenKitchen/css/public/common.css" />
 	<script type='text/javascript' language="javascript">
 	var clicked = false;
 	function submitComment(){
 		if(clicked==false){
-			document.comment.action="${pageContext.request.contextPath}/reply/submitComment.action";
+			document.comment.action="/GreenKitchen/reply/submitComment.action";
 		}
 		document.comment.submit();
 	}
 	
 	function focusComment(obj){
-		document.comment.action="${pageContext.request.contextPath}/reply/submitCommentReply.action?comment_id="+obj.id;
+		document.comment.action="/GreenKitchen/reply/submitCommentReply.action?comment_id="+obj.id;
 		document.comment.recipeComment.focus();
 		clicked = true;
 	}
 	
 	</script> 
-	<script type="text/javascript" src="${pageContext.request.contextPath}/js/jquery-1.3.1.js" ></script>
-	<script type="text/javascript" src="${pageContext.request.contextPath}/js/ajax/ajax_collect.js" ></script>
+	<script type="text/javascript" src="/GreenKitchen/js/jquery-1.3.1.js" ></script>
+	<script type="text/javascript" src="/GreenKitchen/js/ajax/ajax_collect.js" ></script>
 	
 </head>
 
@@ -44,14 +44,14 @@
 				 <span style="float:right;margin-right: 20px">
 				 	<input type="hidden" id="recipe_id" value="${recipe.id}" />
 				 	<input type="hidden" id="hasCollected" value="${hasCollected}" />
-				 	<input id="doCollect" type="image" src="${pageContext.request.contextPath}/images/recipe/collectbutton.jpg"  onclick="doCollect()"/>
-				 	<input id="cancelCollect" type="image" src="${pageContext.request.contextPath}/images/recipe/cancelcollect.jpg"  onclick="cancelCollect()"/>
+				 	<input id="doCollect" type="image" src="/GreenKitchen/images/recipe/collectbutton.jpg"  onclick="doCollect()"/> 
+				 	<input id="cancelCollect" type="image" src="/GreenKitchen/images/recipe/cancelcollect.jpg"  onclick="cancelCollect()"/> 
 				 </span>
 			</div>
 			<div id="content">
-				<a href="${pageContext.request.contextPath}/info/goUserIndex.action?user_id=${recipe.user.id}"><span class="font6">${recipe.user.username}</a>
-				<c:if test="${recipe.user.sex=='男'}"><img src="${pageContext.request.contextPath}/images/recipe/male.jpg"/></c:if>
-				<c:if test="${recipe.user.sex=='女'}"><img src="${pageContext.request.contextPath}/images/recipe/female.jpg"/></c:if></span>
+				<a href="/GreenKitchen/info/goUserIndex.action?user_id=${recipe.user.id}"><span class="font6">${recipe.user.username}</a>
+				<c:if test="${recipe.user.sex=='男'}"><img src="/GreenKitchen/images/recipe/male.jpg"/></c:if>
+				<c:if test="${recipe.user.sex=='女'}"><img src="/GreenKitchen/images/recipe/female.jpg"/></c:if></span>
 				<span style="float:right;font-size: 14px">${recipe.timestamp }</span>				
 				<p style="font-size:14px;line-height:25px;">　　${recipe.description}</p>
 			</div>
@@ -132,22 +132,22 @@
 					<input type="hidden" name="recipe_id" value="${recipe.id}"/>
 					<textarea name="recipeComment" rows="8" cols="80" style="float:left;margin-left: 20px;margin-top: 10px;resize: none" >请输入评论/回复内容...</textarea>
 					<br/>
-					<input style="float:right;margin-left: 10px;margin-top: 10px;" type="image" src="${pageContext.request.contextPath}/images/recipe/commentbutton.jpg"  onclick="submitComment()"/>
+					<input style="float:right;margin-left: 10px;margin-top: 10px;" type="image" src="/GreenKitchen/images/recipe/commentbutton.jpg"  onclick="submitComment()"/>
 				</form>
 			</div>
 			<div class="comments">
 				<div style="float:left;margin-top:10px;width:600px;">
 				<c:forEach items="${comments}" var="comment">
 					<div style="border-bottom: 1px solid #909090;float:left;margin-top: 10px;width:600px;">
-					<span><a href="${pageContext.request.contextPath}/info/goUserIndex.action?user_id=${comment.user.id}"><font class="font6">${comment.user.username }</font></a></span>
+					<span><a href="/GreenKitchen/info/goUserIndex.action?user_id=${comment.user.id}"><font class="font6">${comment.user.username }</font></a></span>
 					<span><font class="font9">　　${comment.timestamp }</font></td></span>
 					<span style="float:right;margin-right: 10px;"><a href="javascript:void(0)" onclick="focusComment(this)" id="${comment.id}"><font class="font9">回复</font></a></span>
 					<div style="float:left;margin-bottom:5px;width:600px;"><font class="font11">　　　${comment.content}</font></div>
 					
 					<c:forEach items="${comment.commentreplies}" var="reply">
 						<div style="float:left;margin-bottom:15px;width:600px;margin-left: 30px;">
-						<span><a href="${pageContext.request.contextPath}/info/goUserIndex.action?user_id=${reply.userByWriterId.id}"><font class="font3">${reply.userByWriterId.username}　</font></a></span><span><font class="font7">回复</font></span>
-						<span><a href="${pageContext.request.contextPath}/info/goUserIndex.action?user_id=${reply.userByReceiverId.id}"><font class="font3">${reply.userByReceiverId.username}</font></a></span><span><font class="font7">:</font></span>
+						<span><a href="/GreenKitchen/info/goUserIndex.action?user_id=${reply.userByWriterId.id}"><font class="font3">${reply.userByWriterId.username}　</font></a></span><span><font class="font7">回复</font></span>
+						<span><a href="/GreenKitchen/info/goUserIndex.action?user_id=${reply.userByReceiverId.id}"><font class="font3">${reply.userByReceiverId.username}</font></a></span><span><font class="font7">:</font></span>
 						<span class="font7">${reply.content}</span>
 						</div>
 					</c:forEach>
@@ -156,11 +156,11 @@
 				</div>
 				<c:if test="${!empty comments }">
 				<div class="pages" style="text-align: center;margin-top: 15px;float:left;width:600px;">
-					<c:if test="${pageNow!=1}"><a href="${pageContext.request.contextPath}/recipe/goRecipeDetail.action?recipe_id=${recipe.id}&pageTo=${pageNow-1}">上一页</a></c:if>
+					<c:if test="${pageNow!=1}"><a href="/GreenKitchen/recipe/goRecipeDetail.action?recipe_id=${recipe.id}&pageTo=${pageNow-1}">上一页</a></c:if>
     				<c:forEach begin="1" end="${pageCount}" var="i" step="1">
-    				<a href="${pageContext.request.contextPath}/recipe/goRecipeDetail.action?recipe_id=${recipe.id}&pageTo=${i}">${i}</a>
+    				<a href="/GreenKitchen/recipe/goRecipeDetail.action?recipe_id=${recipe.id}&pageTo=${i}">${i}</a>
     				</c:forEach>
-    				<c:if test="${pageNow!=pageCount}"><a href="${pageContext.request.contextPath}/recipe/goRecipeDetail.action?recipe_id=${recipe.id}&pageTo=${pageNow+1}">下一页</a></c:if>
+    				<c:if test="${pageNow!=pageCount}"><a href="/GreenKitchen/recipe/goRecipeDetail.action?recipe_id=${recipe.id}&pageTo=${pageNow+1}">下一页</a></c:if>
    				 	<font>　　当前页　${pageNow }/${pageCount }</font>
    			   </div>
    			   </c:if>

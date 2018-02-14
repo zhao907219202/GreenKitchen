@@ -8,8 +8,8 @@
 
 <title>绿色厨房</title>
 
-<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/recipe/recipeSelected.css" />
-<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/public/common.css" />
+<link rel="stylesheet" type="text/css" href="/GreenKitchen/css/recipe/recipeSelected.css" />
+<link rel="stylesheet" type="text/css" href="/GreenKitchen/css/public/common.css" />
 </head>
 
 <body>
@@ -19,9 +19,9 @@
 	</div>
 	<div class="main">
 		<div class="nav" style="background-color: #f8f8f8;">
-			<a href="${pageContext.request.contextPath}/recipe/goSelected.action"><font class="font12">精选</font></a>　　
-			<a href="${pageContext.request.contextPath}/recipe/goTypeIndex.action"><font class="font13">菜谱种类</font></a>　　
-			<a href="${pageContext.request.contextPath}/material/goMaterialIndex.action"><font class="font13">食材分类</font></a>
+			<a href="/GreenKitchen/recipe/goSelected.action"><font class="font12">精选</font></a>　　
+			<a href="/GreenKitchen/recipe/goTypeIndex.action"><font class="font13">菜谱种类</font></a>　　
+			<a href="/GreenKitchen/material/goMaterialIndex.action"><font class="font13">食材分类</font></a>
 		</div>
 		
 		<div class="recipes">
@@ -29,14 +29,14 @@
 			<div class="repeatee">
 				<c:forEach items="${recipes}" var="recipe">
 					<div class="element">
-						<a href="${pageContext.request.contextPath}/recipe/goRecipeDetail.action?recipe_id=${recipe.id}">
+						<a href="/GreenKitchen/recipe/goRecipeDetail.action?recipe_id=${recipe.id}">
 							<img style="width:221px;height:221px"
-							src="/pic${pageContext.request.contextPath}/recipe/${recipe.id}.jpg" />
+							src="/pic/recipe/${recipe.id}.jpg" />
 							<div class="font2" style="margin-top: 5px">${recipe.title}</div>
 						</a>
 						<div class="font3" style="margin-top: 5px">
 							<span style="color:gray">by</span>
-							<a href="${pageContext.request.contextPath}/info/goUserIndex.action?user_id=${recipe.user.id}" class="font3">${recipe.user.username}</a>
+							<a href="/GreenKitchen/info/goUserIndex.action?user_id=${recipe.user.id}" class="font3">${recipe.user.username}</a>
 						</div>
 					</div>
 				</c:forEach>
@@ -44,11 +44,11 @@
 		</div>
 		
 		<div class="pages">
-			<c:if test="${pageNow!=1}"><a href="${pageContext.request.contextPath}/recipe/goSelected.action?pageTo=${pageNow-1}">上一页</a></c:if>
+			<c:if test="${pageNow!=1}"><a href="/GreenKitchen/recipe/goSelected.action?pageTo=${pageNow-1}">上一页</a></c:if>
 			<c:forEach begin="1" end="${pageCount}" var="i" step="1">
-			<a href="${pageContext.request.contextPath}/recipe/goSelected.action?pageTo=${i}">${i}</a>
+			<a href="/GreenKitchen/recipe/goSelected.action?pageTo=${i}">${i}</a>
 			</c:forEach>
-			<c:if test="${pageNow!=pageCount}"><a href="${pageContext.request.contextPath}/recipe/goSelected.action?pageTo=${pageNow+1}">下一页</a></c:if>
+			<c:if test="${pageNow!=pageCount}"><a href="/GreenKitchen/recipe/goSelected.action?pageTo=${pageNow+1}">下一页</a></c:if>
 		 	<font>　　当前页　${pageNow }/${pageCount }</font>
 	   </div>
 	</div>

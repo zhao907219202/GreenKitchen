@@ -7,9 +7,9 @@
 
 
 <title>绿色厨房</title>
-	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css${pageContext.request.contextPath}/recipe${pageContext.request.contextPath}/recipeTypeIndex.css" />
-	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/public/common.css" />
-	<script type="text/javascript" src="${pageContext.request.contextPath}/js${pageContext.request.contextPath}/recipe${pageContext.request.contextPath}/recipeTypeIndex.js" ></script>
+	<link rel="stylesheet" type="text/css" href="/GreenKitchen/css/recipe/recipeTypeIndex.css" />
+	<link rel="stylesheet" type="text/css" href="/GreenKitchen/css/public/common.css" />
+	<script type="text/javascript" src="/GreenKitchen/js/recipe/recipeTypeIndex.js" ></script>
 </head>
 
 <body>
@@ -19,9 +19,9 @@
 
 	<div class="main">
 		<div class="nav" style="background-color: #f8f8f8;">
-			<a href="${pageContext.request.contextPath}/recipe/goSelected.action"><font class="font13">精选</font></a>　　<font class="font12">菜谱种类</font> 　　<a href="${pageContext.request.contextPath}/material/goMaterialIndex.action"><font class="font13">食材分类</font></a>
+			<a href="/GreenKitchen/recipe/goSelected.action"><font class="font13">精选</font></a>　　<font class="font12">菜谱种类</font> 　　<a href="/GreenKitchen/material/goMaterialIndex.action"><font class="font13">食材分类</font></a>
 		</div>
-
+		
 		<div class="type_panel">
 			<div class="type_title">
 				<font class="font14">菜系</font>
@@ -34,7 +34,7 @@
 						<c:if test="${status.count>=24}"><tr id="style_display" style="display:none;"></c:if>
 					</c:if>
 					<td style="line-height:25px;width:120px ">
-						<a href="${pageContext.request.contextPath}/recipe/goTypeDetail.action?type=style&value=${style}"><font class="font4">${style}</font></a>
+						<a href="/GreenKitchen/recipe/goTypeDetail.action?type=style&value=${style}"><font class="font4">${style}</font></a>
 					</td>
 					<c:if test="${status.count % 8 == 0}">
 						</tr>
@@ -50,7 +50,7 @@
 			</table>
 			</div>
 		</div>
-
+		
 		<div class="type_panel">
 			<div class="type_title">
 				<font class="font14">烹饪方法</font>
@@ -63,7 +63,7 @@
 						<c:if test="${status.count>=24}"><tr id="method_display" style="display:none;"></c:if>
 					</c:if>
 					<td style="line-height:25px;width:120px ">
-						<a href="${pageContext.request.contextPath}/recipe/goTypeDetail.action?type=method&value=${method}"><font class="font4">${method}</font></a>
+						<a href="/GreenKitchen/recipe/goTypeDetail.action?type=method&value=${method}"><font class="font4">${method}</font></a>
 					</td>
 					<c:if test="${status.count % 8 == 0}">
 						</tr>
@@ -79,7 +79,7 @@
 			</table>
 			</div>
 		</div>
-
+		
 		<div class="type_panel">
 			<div class="type_title">
 				<font class="font14">口味</font>
@@ -92,7 +92,7 @@
 						<c:if test="${status.count>=24}"><tr id="flavor_display" style="display:none;"></c:if>
 					</c:if>
 					<td style="line-height:25px;width:120px ">
-						<a href="${pageContext.request.contextPath}/recipe/goTypeDetail.action?type=flavor&value=${flavor}"><font class="font4">${flavor}</font></a>
+						<a href="/GreenKitchen/recipe/goTypeDetail.action?type=flavor&value=${flavor}"><font class="font4">${flavor}</font></a>
 					</td>
 					<c:if test="${status.count % 8 == 0}">
 						</tr>
@@ -108,7 +108,7 @@
 			</table>
 			</div>
 		</div>
-
+		
 		<div class="type_panel">
 			<div class="type_title">
 				<font class="font14">菜式</font>
@@ -121,7 +121,7 @@
 						<c:if test="${status.count>=24}"><tr id="kind_display" style="display:none;"></c:if>
 					</c:if>
 					<td style="line-height:25px;width:120px ">
-						<a href="${pageContext.request.contextPath}/recipe/goTypeDetail.action?type=kind&value=${kind}"><font class="font4">${kind}</font></a>
+						<a href="/GreenKitchen/recipe/goTypeDetail.action?type=kind&value=${kind}"><font class="font4">${kind}</font></a>
 					</td>
 					<c:if test="${status.count % 8 == 0}">
 						</tr>
@@ -137,7 +137,7 @@
 			</table>
 			</div>
 		</div>
-
+		
 		<div class="type_panel">
 			<div class="type_title">
 				<font class="font14">主食</font>
@@ -150,7 +150,7 @@
 						<c:if test="${status.count>=24}"><tr id="stape_display" style="display:none;"></c:if>
 					</c:if>
 					<td style="line-height:25px;width:120px ">
-						<a href="${pageContext.request.contextPath}/recipe/goTypeDetail.action?type=stape&value=${stape}"><font class="font4">${stape}</font></a>
+						<a href="/GreenKitchen/recipe/goTypeDetail.action?type=stape&value=${stape}"><font class="font4">${stape}</font></a>
 					</td>
 					<c:if test="${status.count % 8 == 0}">
 						</tr>
@@ -166,7 +166,7 @@
 			</table>
 			</div>
 		</div>
-
+		
 		<div class="type_panel">
 			<div class="type_title">
 				<font class="font14">烘焙</font>
@@ -179,7 +179,7 @@
 						<c:if test="${status.count>=24}"><tr id="bake_display" style="display:none;"></c:if>
 					</c:if>
 					<td style="line-height:25px;width:120px ">
-						<a href="${pageContext.request.contextPath}/recipe/goTypeDetail.action?type=bake&value=${bake}"><font class="font4">${bake}</font></a>
+						<a href="/GreenKitchen/recipe/goTypeDetail.action?type=bake&value=${bake}"><font class="font4">${bake}</font></a>
 					</td>
 					<c:if test="${status.count % 8 == 0}">
 						</tr>
@@ -188,7 +188,7 @@
 			</table>
 			</div>
 		</div>
-
+		
 		<div class="type_panel">
 			<div class="type_title">
 				<font class="font14">厨房工具</font>
@@ -201,7 +201,7 @@
 						<c:if test="${status.count>=24}"><tr id="tool_display" style="display:none;"></c:if>
 					</c:if>
 					<td style="line-height:25px;width:120px ">
-						<a href="${pageContext.request.contextPath}/recipe/goTypeDetail.action?type=tool&value=${tool}"><font class="font4">${tool}</font></a>
+						<a href="/GreenKitchen/recipe/goTypeDetail.action?type=tool&value=${tool}"><font class="font4">${tool}</font></a>
 					</td>
 					<c:if test="${status.count % 8 == 0}">
 						</tr>
@@ -210,7 +210,7 @@
 			</table>
 			</div>
 		</div>
-
+		
 		<div class="type_panel">
 			<div class="type_title">
 				<font class="font14">场景</font>
@@ -223,7 +223,7 @@
 						<c:if test="${status.count>=24}"><tr id="scene_display" style="display:none;"></c:if>
 					</c:if>
 					<td style="line-height:25px;width:120px ">
-						<a href="${pageContext.request.contextPath}/recipe/goTypeDetail.action?type=scene&value=${scene}"><font class="font4">${scene}</font></a>
+						<a href="/GreenKitchen/recipe/goTypeDetail.action?type=scene&value=${scene}"><font class="font4">${scene}</font></a>
 					</td>
 					<c:if test="${status.count % 8 == 0}">
 						</tr>
@@ -232,7 +232,7 @@
 			</table>
 			</div>
 		</div>
-
+		
 		<div class="type_panel">
 			<div class="type_title">
 				<font class="font14">人群</font>
@@ -245,7 +245,7 @@
 						<c:if test="${status.count>=24}"><tr id="crowd_display" style="display:none;"></c:if>
 					</c:if>
 					<td style="line-height:25px;width:120px ">
-						<a href="${pageContext.request.contextPath}/recipe/goTypeDetail.action?type=crowd&value=${crowd}"><font class="font4">${crowd}</font></a>
+						<a href="/GreenKitchen/recipe/goTypeDetail.action?type=crowd&value=${crowd}"><font class="font4">${crowd}</font></a>
 					</td>
 					<c:if test="${status.count % 8 == 0}">
 						</tr>
@@ -254,7 +254,7 @@
 			</table>
 			</div>
 		</div>
-
+		
 		<div class="type_panel">
 			<div class="type_title">
 				<font class="font14">美容瘦身</font>
@@ -267,7 +267,7 @@
 						<c:if test="${status.count>=24}"><tr id="slim_display" style="display:none;"></c:if>
 					</c:if>
 					<td style="line-height:25px;width:120px ">
-						<a href="${pageContext.request.contextPath}/recipe/goTypeDetail.action?type=slim&value=${slim}"><font class="font4">${slim}</font></a>
+						<a href="/GreenKitchen/recipe/goTypeDetail.action?type=slim&value=${slim}"><font class="font4">${slim}</font></a>
 					</td>
 					<c:if test="${status.count % 8 == 0}">
 						</tr>
@@ -276,7 +276,7 @@
 			</table>
 			</div>
 		</div>
-
+		
 		<div class="type_panel">
 			<div class="type_title">
 				<font class="font14">功效</font>
@@ -289,7 +289,7 @@
 						<c:if test="${status.count>=24}"><tr id="effect_display" style="display:none;"></c:if>
 					</c:if>
 					<td style="line-height:25px;width:120px ">
-						<a href="${pageContext.request.contextPath}/recipe/goTypeDetail.action?type=effect&value=${effect}"><font class="font4">${effect}</font></a>
+						<a href="/GreenKitchen/recipe/goTypeDetail.action?type=effect&value=${effect}"><font class="font4">${effect}</font></a>
 					</td>
 					<c:if test="${status.count % 8 == 0}">
 						</tr>
@@ -305,7 +305,7 @@
 			</table>
 			</div>
 		</div>
-
+		
 		<div class="type_panel">
 			<div class="type_title">
 				<font class="font14">疾病料理</font>
@@ -318,7 +318,7 @@
 						<c:if test="${status.count>=24}"><tr id="nurse_display" style="display:none;"></c:if>
 					</c:if>
 					<td style="line-height:25px;width:120px ">
-						<a href="${pageContext.request.contextPath}/recipe/goTypeDetail.action?type=nurse&value=${nurse}"><font class="font4">${nurse}</font></a>
+						<a href="/GreenKitchen/recipe/goTypeDetail.action?type=nurse&value=${nurse}"><font class="font4">${nurse}</font></a>
 					</td>
 					<c:if test="${status.count % 8 == 0}">
 						</tr>
@@ -327,7 +327,7 @@
 			</table>
 			</div>
 		</div>
-
+		
 		<div class="type_panel">
 			<div class="type_title">
 				<font class="font14">节日时令</font>
@@ -340,7 +340,7 @@
 						<c:if test="${status.count>=24}"><tr id="festival_display" style="display:none;"></c:if>
 					</c:if>
 					<td style="line-height:25px;width:120px ">
-						<a href="${pageContext.request.contextPath}/recipe/goTypeDetail.action?type=festival&value=${festival}"><font class="font4">${festival}</font></a>
+						<a href="/GreenKitchen/recipe/goTypeDetail.action?type=festival&value=${festival}"><font class="font4">${festival}</font></a>
 					</td>
 					<c:if test="${status.count % 8 == 0}">
 						</tr>

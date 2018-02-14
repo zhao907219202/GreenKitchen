@@ -5,8 +5,8 @@
 <html>
 <head>
 <title>绿色厨房</title>
-	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/public/common.css" />
-	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/rank/rankDetail.css" />
+	<link rel="stylesheet" type="text/css" href="/GreenKitchen/css/public/common.css" />
+	<link rel="stylesheet" type="text/css" href="/GreenKitchen/css/rank/rankDetail.css" />
 </head>
 
 <body>
@@ -25,10 +25,10 @@
 						<c:if test="${status.count>3}">
 						<td style="width:50px;text-align: center;"><font class="font18">${status.count}</td>
 						</c:if>
-						<td style="width:650px;"><a href="${pageContext.request.contextPath}/recipe/goRecipeDetail.action?recipe_id=${recipe.id}">
+						<td style="width:650px;"><a href="/GreenKitchen/recipe/goRecipeDetail.action?recipe_id=${recipe.id}">
 						<font class="font16">${recipe.title}</font></a>
 						<span style="color:gray;font-size: 12px;">by</span>
-						<a href="${pageContext.request.contextPath}/info/goUserIndex.action?user_id=${recipe.user.id}"><font class="font3">${recipe.user.username}</font></a></td>
+						<a href="/GreenKitchen/info/goUserIndex.action?user_id=${recipe.user.id}"><font class="font3">${recipe.user.username}</font></a></td>
 						<td><font class="font18">${recipe.collectednum}收藏</font></td>
 					</tr>
 				</c:forEach>
@@ -36,11 +36,11 @@
 		</div>
 			
 		<div class="pages">
-			<c:if test="${pageNow!=1}"><a href="${pageContext.request.contextPath}/rank/goRankDetail.action?pageTo=${pageNow-1}&title_id=${title_id}">上一页</a></c:if>
+			<c:if test="${pageNow!=1}"><a href="/GreenKitchen/rank/goRankDetail.action?pageTo=${pageNow-1}&title_id=${title_id}">上一页</a></c:if>
 			<c:forEach begin="${(pageNow-2)>1?(pageNow-2):1}" end="${(pageNow+2)<pageCount?(pageNow+2):pageCount}" var="i" step="1">
-			<a href="${pageContext.request.contextPath}/rank/goRankDetail.action?pageTo=${i}&title_id=${title_id}">${i}</a>
+			<a href="/GreenKitchen/rank/goRankDetail.action?pageTo=${i}&title_id=${title_id}">${i}</a>
 			</c:forEach>
-			<c:if test="${pageNow!=pageCount}"><a href="${pageContext.request.contextPath}/rank/goRankDetail.action?pageTo=${pageNow+1}&title_id=${title_id}">下一页</a></c:if>
+			<c:if test="${pageNow!=pageCount}"><a href="/GreenKitchen/rank/goRankDetail.action?pageTo=${pageNow+1}&title_id=${title_id}">下一页</a></c:if>
 		 	<font>　　当前页　${pageNow }/${pageCount }</font>
 	   </div>
 		

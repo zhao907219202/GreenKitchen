@@ -5,10 +5,10 @@
 <html>
 <head>
 <title>绿色厨房</title>
-	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/public/common.css" />
-	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/issue/issue_step_2.css" />
-	<script type="text/javascript" src="${pageContext.request.contextPath}/js/jquery-1.3.1.js" ></script>
-	<script type="text/javascript" src="${pageContext.request.contextPath}/js/issue/issue_step_2.js" ></script>
+	<link rel="stylesheet" type="text/css" href="/GreenKitchen/css/public/common.css" />
+	<link rel="stylesheet" type="text/css" href="/GreenKitchen/css/issue/issue_step_2.css" />
+	<script type="text/javascript" src="/GreenKitchen/js/jquery-1.3.1.js" ></script>
+	<script type="text/javascript" src="/GreenKitchen/js/issue/issue_step_2.js" ></script>
 </head>
 
 <body>
@@ -19,7 +19,7 @@
 			<font class="font8">创建菜谱(Step 2)</font>
 			<font class="font7">从现在起，不做孤独的美食家。</font>
 		</div>
-		<form action="${pageContext.request.contextPath}/issue/stepTwo.action" onsubmit="findStepNum()" method="post" enctype="multipart/form-data" name="issue_step_2">
+		<form action="/GreenKitchen/issue/stepTwo.action" onsubmit="findStepNum()" method="post" enctype="multipart/form-data" name="issue_step_2">
 			<input type="hidden" name="stepNum" id="stepNum"/>
 			<input type="hidden" name="recipe_id" value="${recipe_id}"/>
 			<div class="main_spice">
@@ -56,7 +56,7 @@
 				<table id="step_table">
 					<tr>
 					<td style="width:150px">
-					<img id="origin_1"  onclick="imgClick(this)" src="${pageContext.request.contextPath}/images/issue/issue_step.jpg" style="width:140px;height:90px;"/>
+					<img id="origin_1"  onclick="imgClick(this)" src="/GreenKitchen/images/issue/issue_step.jpg" style="width:140px;height:90px;"/>
 					<img id="preview_1" style="width:140px;height:90px;display:none"/>
 					<input type="file" name="files" style="display:none" id="upload_1" onchange="imgPreview(this)"/>
 					</td>
@@ -65,7 +65,7 @@
 					
 					<tr>
 					<td style="width:150px">
-					<img id="origin_2"  onclick="imgClick(this)" src="${pageContext.request.contextPath}/images/issue/issue_step.jpg" style="width:140px;height:90px;"/>
+					<img id="origin_2"  onclick="imgClick(this)" src="/GreenKitchen/images/issue/issue_step.jpg" style="width:140px;height:90px;"/>
 					<img id="preview_2" style="width:140px;height:90px;display:none"/>
 					<input type="file" name="files" style="display:none" id="upload_2" onchange="imgPreview(this)"/>
 					</td>
@@ -74,7 +74,7 @@
 					
 					<tr>
 					<td style="width:150px">
-					<img id="origin_3"  onclick="imgClick(this)" src="${pageContext.request.contextPath}/images/issue/issue_step.jpg" style="width:140px;height:90px;"/>
+					<img id="origin_3"  onclick="imgClick(this)" src="/GreenKitchen/images/issue/issue_step.jpg" style="width:140px;height:90px;"/>
 					<img id="preview_3" style="width:140px;height:90px;display:none"/>
 					<input type="file" name="files" style="display:none" id="upload_3" onchange="imgPreview(this)"/>
 					</td>

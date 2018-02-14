@@ -7,8 +7,8 @@
 
 
 <title>绿色厨房</title>
-	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/public/common.css" />
-	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/recipe/recipeMaterialList.css" />
+	<link rel="stylesheet" type="text/css" href="/GreenKitchen/css/public/common.css" />
+	<link rel="stylesheet" type="text/css" href="/GreenKitchen/css/recipe/recipeMaterialList.css" />
 </head>
   
   <body>
@@ -18,23 +18,23 @@
 	
 	<div class="main_List">
 	 	<div class="nav" style="background-color: #f8f8f8;">
-			<a href="${pageContext.request.contextPath}/recipe/goSelected.action"><font class="font13">精选</font></a>　　
-			<a href="${pageContext.request.contextPath}/recipe/goTypeIndex.action"><font class="font13">菜谱种类</font></a> 　　
-			<a href="${pageContext.request.contextPath}${pageContext.request.contextPath}/material/goMaterialIndex.action"><font class="font13">食材分类</font></a>
+			<a href="/GreenKitchen/recipe/goSelected.action"><font class="font13">精选</font></a>　　
+			<a href="/GreenKitchen/recipe/goTypeIndex.action"><font class="font13">菜谱种类</font></a> 　　
+			<a href="/GreenKitchen/material/goMaterialIndex.action"><font class="font13">食材分类</font></a>
 		</div>
-
+		
 		  <div class="type_one">
 				<div class="type_title" >
 					<font class="font14">${materialone.type}</font>
 				</div>
 				<div class="type_list">
-					<div class="type_two"><a href="${pageContext.request.contextPath}/material/goMaterialList.action?materialone_id=${materialtwos[0].materialone.id}"><font class="font15">${materialone.name}</font></a>
-					</div>
+					<div class="type_two"><a href="/GreenKitchen/material/goMaterialList.action?materialone_id=${materialtwos[0].materialone.id}"><font class="font15">${materialone.name}</font></a>
+					</div> 
 					<div class="elements">
 					<c:forEach items="${materialtwos}" var="material">
 						<div class="element">
-							<a href="${pageContext.request.contextPath}/material/goMaterialDetail.action?material_id=${material.id}"><img style="width:65px;height:65px"
-								src="/pic${pageContext.request.contextPath}/material/${material.pictureName }.jpg" />
+							<a href="/GreenKitchen/material/goMaterialDetail.action?material_id=${material.id}"><img style="width:65px;height:65px"
+								src="/pic/material/${material.pictureName }.jpg" />
 								<div class="font2" style="margin-top: 5px;text-align: center;">${material.name}</div></a>
 						</div>
 					</c:forEach>
