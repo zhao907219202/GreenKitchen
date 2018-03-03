@@ -47,7 +47,7 @@ public class IssueController {
 		response.setCharacterEncoding("utf-8");
 		PrintWriter out = response.getWriter();
 		if (loginuser == null) {
-			out.write("<script>alert(\"���ȵ�¼��\");window.location.href=\"/info/goLoginView.action\";</script>");
+			out.write("<script>alert(\"请先登录\");window.location.href=\"/info/goLoginView.action\";</script>");
 			return null;
 		}
 		return "issue/issue_step_1";
@@ -75,7 +75,7 @@ public class IssueController {
 			recipeNew.setDescription(description);
 		recipeService.add(recipeNew);
 
-		String pic_path = "D:\\JavaWeb\\PictureServer\\upload\\temp\\recipe\\";
+		String pic_path = "/Users/zy-dl/Desktop/user/zhaoyu/server/PictureServer/upload/temp/recipe";
 		Recipe recipeReal = recipeService.getNewestRecipeByUser(loginuser);
 		String filename = recipeReal.getId() + ".jpg";
 		File newFile = new File(pic_path + filename);
