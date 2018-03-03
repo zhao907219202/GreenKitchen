@@ -82,7 +82,7 @@ public class RecipeController {
 				modelAndView.addObject("hasCollected", "yes");
 			else
 				modelAndView.addObject("hasCollected", "no");
-				
+
 		}
 
 		modelAndView.setViewName("recipe/recipeDetail");
@@ -115,15 +115,15 @@ public class RecipeController {
 			throws UnsupportedEncodingException {
 
 		ModelAndView modelAndView = new ModelAndView();
-		String value_zh = new String(value.getBytes("iso8859-1"), "utf-8");
+		String value_zh = new String(value.getBytes("utf-8"));
 		int pageNow = 1;
 		int pageSize = 8;
-		int pageCount = this.typeService.getTypeRecipePageCount(type, value_zh,
+		int pageCount = this.typeService.getTypeRecipePageCount(type, value,
 				pageSize);
 		if (pageTo != null)
 			pageNow = Integer.parseInt(pageTo);
 		List<Recipe> recipes = this.typeService.getTypeRecipeByPage(type,
-				value_zh, pageNow, pageSize);
+        value_zh, pageNow, pageSize);
 		modelAndView.addObject("pageCount", pageCount);
 		modelAndView.addObject("pageNow", pageNow);
 		modelAndView.addObject("recipes", recipes);
