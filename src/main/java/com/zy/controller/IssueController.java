@@ -127,7 +127,7 @@ public class IssueController {
 		if (files != null && files.length > 0) {
 			for (int i = 1; i <= files.length; i++) {
 				MultipartFile file = files[i - 1];
-				String pic_path = "D:\\JavaWeb\\PictureServer\\upload\\temp\\recipe\\";
+				String pic_path = "/Users/zy-dl/Desktop/user/zhaoyu/server/PictureServer/upload/temp/recipe";
 				String filename = recipe_id + "-" + i + ".jpg";
 				File newFile = new File(pic_path + filename);
 				file.transferTo(newFile);
